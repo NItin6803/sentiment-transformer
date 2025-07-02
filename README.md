@@ -1,54 +1,97 @@
 # sentiment-transformer
-# 💬 Sentiment Transformer Chatbot
+# 🤖 Sentiment Chatbot – Local NLP Assistant
 
-This is a Python chatbot project that detects the **sentiment** (Positive, Negative, or Neutral) of a movie review using a fine-tuned transformer model.
+A fully local, web-based chatbot that detects the **sentiment** of user inputs and responds with empathy.  
+Built using **Hugging Face Transformers**, **Flask**, and **LangChain**, this project simulates a mood-aware conversational assistant without needing any API keys or cloud models.
 
-The chatbot then gives a response based on the sentiment.
+![Chatbot UI](./screenshot.png) <!-- Optional: replace with your screenshot file -->
 
 ---
 
-## 🔧 How to Use
+## 🚀 Features
 
-1. Clone the repository or download the ZIP.
-2. Install the required libraries:
-   ```bash
-   pip install -r requirements.txt
-Run the app:
+- 🔒 **Runs 100% Locally** – No OpenAI/Hugging Face API keys required
+- 🧠 **Sentiment Detection** – Uses a fine-tuned **DistilBERT** model
+- 💬 **Contextual Memory** – Remembers conversation using **LangChain**
+- 🌓 **Dark Mode UI** – Includes toggle switch
+- 🧑‍💻 **Responsive Web Interface** – Built using **HTML/CSS/JS**
+- 🖼️ **Bot Profile Image** – For realistic touch
 
-bash
-Copy
-Edit
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: HTML, CSS, JavaScript  
+- **Backend**: Flask  
+- **NLP Model**: DistilBERT (via Hugging Face Transformers)  
+- **Memory & Flow**: LangChain  
+- **Deployment**: Localhost (No internet required)
+
+---
+
+## 🧠 How It Works
+
+1. You type a message (e.g., _"I had a bad day..."_)
+2. The model classifies it as **positive**, **neutral**, or **negative**
+3. The chatbot responds with an appropriate message and emoji
+4. Past messages are stored using LangChain memory
+
+---
+
+## 📂 Project Structure
+sentiment-transformer/
+│
+├── app.py # Flask backend
+├── templates/
+│ └── index.html # Chatbot UI
+├── static/
+│ ├── style.css # Custom styling
+│ └── script.js # Frontend logic
+├── model/
+│ └── sentiment_model/ # DistilBERT model directory
+├── requirements.txt # Python dependencies
+└── README.md # Project documentation
+
+---
+
+## ▶️ How to Run
+
+1. Clone the repo  
+git clone https://github.com/NItin6803/sentiment-transformer.git
+cd sentiment-transformer
+
+2. Install dependencies  
+pip install -r requirements.txt
+
+3. Run the app  
 python app.py
-Open your browser and go to:
+
+4. Open in browser  
 http://localhost:5000
 
-🧠 What this project includes
-A fine-tuned transformer model (DistilBERT)
+----
 
-Flask-based web application
+## 📌 Future Enhancements
 
-Movie review dataset
+- Add voice input/output  
+- Save chat history locally  
+- Train sentiment model on custom data  
+- Add multi-language support
+  
+---
 
-Sentiment prediction and chatbot response
+## 👨‍💻 Author
 
-Web interface using HTML and CSS
+**Nitin B**  
+🔗 [LinkedIn](https://linkedin.com/in/nitin-b-ab7b93218)  
+📧 bnitinsharma68@gmail.com
 
-📁 Project Files
-app.py - Flask app to run the chatbot
+---
 
-chatbot.py - Logic for responding based on sentiment
+## ⭐️ Show Some Love
 
-train_model.py - Script to train the transformer model
+If you like this project, please give it a ⭐️ on [GitHub](https://github.com/NItin6803/sentiment-transformer)!
 
-generate_dataset.py - Script to prepare dataset
 
-templates/ - HTML frontend
 
-static/ - CSS and images
 
-📌 Notes
-The large dataset and model files are not included on GitHub because of size limits. You can upload them to Google Drive and access them from there in your code.
-
-🙋‍♂️ Author
-Nitin Sharma
-GitHub Profile
